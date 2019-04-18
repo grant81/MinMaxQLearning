@@ -41,8 +41,8 @@ class MiniMax_Q_Agent:
             # action = np.argmax(self.PI[state])
         return action
 
-    def update_Qval(self, a, o, s, reward):
-        self.Q[s, a, o] = (1 - self.alpha) * self.Q[s, a, o] + self.alpha * (reward + self.gamma * self.V[s])
+    def update_Qval(self, a, o, s, next_s,reward):
+        self.Q[s, a, o] = (1 - self.alpha) * self.Q[s, a, o] + self.alpha * (reward + self.gamma * self.V[next_s])
 
     def update_PI(self, state):
         c = np.zeros(self.action_num+1)
@@ -55,6 +55,9 @@ class MiniMax_Q_Agent:
         b_eq = [1]
         bounds = ((None, None),) + ((0, 1),) * self.action_num
         res = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=bounds)
+        for i in range(1,len(res.x)):
+            if res.x[i]<0:
+                res.x[i] = 0
         if res.success:
             self.PI[state] = res.x[1:]
             self.V[state] = res.x[0]
