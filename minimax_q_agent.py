@@ -61,16 +61,16 @@ class MiniMax_Q_Agent:
 
     def save_agent(self,path = MODEL_PATH):
         PI = pd.DataFrame(self.PI)
-        Q = pd.DataFrame(self.Q)
+        # Q = pd.DataFrame(self.Q)
         V = pd.DataFrame(self.V)
         PI.to_csv(path + 'PI.txt', sep=' ', header=False, index=False)
-        Q.to_csv(path + 'Q.txt', sep=' ', header=False, index=False)
+        # Q.to_csv(path + 'Q.txt', sep=' ', header=False, index=False)
         V.to_csv(path + 'V.txt', sep=' ', header=False, index=False)
 
     def load_agent(self,path = MODEL_PATH):
         PI = pd.read_csv(path + 'PI.txt', sep=' ', header=False, index=False)
-        Q = pd.read_csv(path + 'Q.txt', sep=' ', header=False, index=False)
+        # Q = pd.read_csv(path + 'Q.txt', sep=' ', header=False, index=False)
         V = pd.read_csv(path + 'V.txt', sep=' ', header=False, index=False)
         self.PI = PI.values
-        self.Q = Q.values
+        # self.Q = Q.values
         self.V = V.values
