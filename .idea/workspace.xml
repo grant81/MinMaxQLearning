@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8a192a-e893-4e47-bedc-109dc63c7fea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/q_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/random_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/PI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/PI.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/V.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/V.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/agent_obj.ag" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS/minmax_aganist_random/agent_obj.ag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperparameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/hyperparameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minimax_q_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/minimax_q_agent.py" afterDir="false" />
     </list>
@@ -18,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="43">
+              <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -28,19 +33,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/soccer_env.py">
+        <entry file="file://$PROJECT_DIR$/random_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minimax_q_agent.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/q_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="123">
+              <caret line="51" column="32" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="51" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -49,10 +54,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/scipy/optimize/_linprog.py">
+        <entry file="file://$PROJECT_DIR$/soccer_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="1042" selection-start-line="1042" selection-end-line="1042" />
+            <state relative-caret-position="-1308">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/minimax_q_agent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/hyperparameters.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -78,6 +95,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>game</find>
+      <find>decay</find>
       <find>action_decoder</find>
     </findStrings>
   </component>
@@ -89,6 +107,8 @@
       <list>
         <option value="$PROJECT_DIR$/minimax_q-learning.py" />
         <option value="$PROJECT_DIR$/soccer_env.py" />
+        <option value="$PROJECT_DIR$/random_agent.py" />
+        <option value="$PROJECT_DIR$/q_agent.py" />
         <option value="$PROJECT_DIR$/hyperparameters.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/minimax_q_agent.py" />
@@ -257,23 +277,24 @@
       <updated>1555513863005</updated>
       <workItem from="1555513864429" duration="8316000" />
       <workItem from="1555560792072" duration="8480000" />
-      <workItem from="1555606758156" duration="8227000" />
+      <workItem from="1555606758156" duration="19184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25023000" />
+    <option name="totallyTimeSpent" value="35980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07275223" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16609472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40311006" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4028436" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,22 +303,22 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.42180094" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.42535546" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49579832" weight="0.020590253" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49579832" weight="0.5517731" />
       <window_info anchor="right" x="0" y="0" width="140" height="765" id="Documentation" order="4" sideWeight="0.5042017" side_tool="true" weight="0.22978723" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07275223" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14468086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40311006" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4028436" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -306,11 +327,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.42180094" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.4258373" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49579832" visible="true" weight="0.020590253" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49579832" weight="0.5517731" />
       <window_info anchor="right" x="0" y="0" width="140" height="765" id="Documentation" order="4" sideWeight="0.5042017" side_tool="true" weight="0.22978723" />
       <window_info anchor="right" id="Database" order="5" />
     </layout-to-restore>
@@ -322,15 +343,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/minimax_q_agent.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1555614822597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/final_project$main.coverage" NAME="main Coverage Results" MODIFIED="1555620410748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/numpy/core/numeric.py">
@@ -347,24 +368,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hyperparameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -375,27 +382,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="51" column="32" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="51" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hyperparameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soccer_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1308">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="43">
+          <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soccer_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minimax_q_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        <state relative-caret-position="155">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
