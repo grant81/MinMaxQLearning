@@ -63,14 +63,20 @@ class SoccerEnv:
             self.positions[player] = newPosition
             return -1
 
-    def boardToState(self):
-        xA, yA = self.positions[0]
-        xB, yB = self.positions[1]
+    def boardToState(self,reverse_order=False):
+        if reverse_order:
+            xA, yA = self.positions[1]
+            xB, yB = self.positions[0]
+            ball_holder = int(not self.ball_holder)
+        else:
+            xA, yA = self.positions[0]
+            xB, yB = self.positions[1]
+            ball_holder = self.ball_holder
         sA = xA * self.w + xA
         sB = yB * self.w + yA
         sB -= 1 if sB > sA else 0
         # encoded state on the bases on w*h-1, holding' Sa' Sb
-        state = (sA * (self.w * self.h - 1) + sB) + (self.w * self.h) * (self.w * self.h - 1) * self.ball_holder
+        state = (sA * (self.w * self.h - 1) + sB) + (self.w * self.h) * (self.w * self.h - 1) * ball_holder
         return state
 
     def action_decoder(self, action):

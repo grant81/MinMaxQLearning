@@ -45,18 +45,21 @@ def train_double(agent0, agent1, eps=10000):
     for episode in range(eps):
         env.reset()
         reward = -1
-        state = env.boardToState()
+        state0 = env.boardToState()
+        state1 = env.boardToState(True)
         step = 0
         while reward < 0 and step < 800:
             step += 1
-            a0 = agent0.take_action(state)
-            a1 = agent1.take_action(state)
-            next_state, reward = env.step(a0, a1)
-            agent0.update_Qval(a0, a1, state, next_state, int(reward == 0))
-            agent0.update_PI(state)
-            agent1.update_Qval(a1, a0, state, next_state, int(reward == 0))
-            agent1.update_PI(state)
-            state = next_state
+            a0 = agent0.take_action(state0)
+            a1 = agent1.take_action(state1)
+            next_state0, reward = env.step(a0, a1)
+            next_state1 = env.boardToState(True)
+            agent0.update_Qval(a0, a1, state0, next_state0, int(reward == 0))
+            agent0.update_PI(state0)
+            agent1.update_Qval(a1, a0, state1, next_state1, int(reward == 0))
+            agent1.update_PI(state1)
+            state0 = next_state0
+            state1 = next_state1
         result0[episode] = int(reward == 0)
         result1[episode] = int(reward == 1)
 
@@ -98,6 +101,8 @@ def test(agent0, agent1, num=100000):
 # file = open(MODEL_PATH+'agent_obj.ag','rb')
 # agent0 = pickle.load(file)
 # file.close()
-agent0 = Random_Agent(env)
+# agent0.training = False
+agent0 = MiniMax_Q_Agent(0, env)
 agent1 = MiniMax_Q_Agent(1, env)
-train_double(agent0,agent1,10000)
+train_double(agent0,agent1,20000)
+# test(agent0,agent1,100000)
