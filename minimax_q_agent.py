@@ -54,7 +54,7 @@ class MiniMax_Q_Agent:
         A_eq[0,0] = 0
         b_eq = [1]
         bounds = ((None, None),) + ((0, 1),) * self.action_num
-        res = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=bounds)
+        res = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=bounds,method='interior')
         for i in range(1,len(res.x)):
             if res.x[i]<0:
                 res.x[i] = 0
