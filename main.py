@@ -56,7 +56,7 @@ def train_double(agent0, agent1, eps=10000):
             next_state1 = env.boardToState(True)
             agent0.update_Qval(a0, a1, state0, next_state0, int(reward == 0))
             agent0.update_PI(state0)
-            agent1.update_Qval(a1, a0, state1, next_state1, int(reward == 0))
+            agent1.update_Qval(a1, a0, state1, next_state1, int(reward == 1))
             agent1.update_PI(state1)
             state0 = next_state0
             state1 = next_state1
@@ -103,6 +103,7 @@ def test(agent0, agent1, num=100000):
 # file.close()
 # agent0.training = False
 agent0 = MiniMax_Q_Agent(0, env)
-agent1 = MiniMax_Q_Agent(1, env)
-train_double(agent0,agent1,20000)
+agent1 =  Random_Agent(env)
+# train_double(agent0,agent1,20000)
+train(agent0,agent1,10000)
 # test(agent0,agent1,100000)
