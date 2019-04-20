@@ -108,11 +108,13 @@ def test(agent0, agent1, num=100000):
 # agent0 = pickle.load(file)
 # file.close()
 # agent0.training = False
-agent0 = Q_Agent(1, env)
-
-agent1 =  MiniMax_Q_Agent(1,env)
-agent1.load_agent('serverAgents/AGENTS/minmax_aganist_random/')
-agent1.training = False
+agent0 = Q_Agent(0, env)
+agent0.load_agent('AGENTS/q_against_random/')
+agent0.training = False
+# agent1 = MiniMax_Q_Agent(1,env)
+# agent1.load_agent('serverAgents/AGENTS/minimax_against_random/')
+# agent1.training = False
+agent1 = Random_Agent(env)
 # train_double(agent0,agent1,20000)
-train(agent0,agent1,10000)
-# test(agent0,agent1,100000)
+# train(agent0,agent1,200000)
+test(agent1,agent0,100000)

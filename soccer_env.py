@@ -29,13 +29,13 @@ class SoccerEnv:
         first_player_to_move = self.select_player_random()
         goal = -1
         if first_player_to_move == 0:
-            goal = self.move(first_player_to_move, action0)
+            goal = self.move(0, action0)
             if goal < 0:
-                self.move(1 - first_player_to_move, action1)
+                self.move(1, action1)
         else:
-            goal = self.move(first_player_to_move, action1)
+            goal = self.move(1, action1)
             if goal < 0:
-                self.move(1 - first_player_to_move, action0)
+                self.move(0, action0)
         # return state and reward
         encoded_state = self.boardToState()
         return encoded_state, goal
@@ -58,7 +58,7 @@ class SoccerEnv:
         # check if the player scored
         elif self.ball_holder == player and np.array_equiv(newPosition, self.goal_positions[opponent]):
             self.positions[player] = newPosition
-            return 1 * self.ball_holder
+            return 1 * player
         else:
             self.positions[player] = newPosition
             return -1
@@ -72,8 +72,8 @@ class SoccerEnv:
             xA, yA = self.positions[0]
             xB, yB = self.positions[1]
             ball_holder = self.ball_holder
-        sA = xA * self.w + xA
-        sB = yB * self.w + yA
+        sA = xA * self.w + yA
+        sB = xB * self.w + yB
         sB -= 1 if sB > sA else 0
         # encoded state on the bases on w*h-1, holding' Sa' Sb
         state = (sA * (self.w * self.h - 1) + sB) + (self.w * self.h) * (self.w * self.h - 1) * ball_holder
