@@ -95,9 +95,11 @@ def test(agent0, agent1, num=100000):
 
 
 # test()
-# file = open(MODEL_PATH+'agent_obj.ag','rb')
-# agent0 = pickle.load(file)
-# file.close()
+file = open('AGENTS/minimax_against_random/'+'agent_obj.ag','rb')
+agent0 = pickle.load(file)
+file.close()
+agent0.training = False
+agent0.id = 1
 agent1 = Random_Agent(env)
-agent0 = MiniMax_Q_Agent(0, env)
-train(agent0,agent1,100000)
+# agent0 = MiniMax_Q_Agent(0, env)
+test(agent0,agent1,100000)
