@@ -95,11 +95,11 @@ def test(agent0, agent1, num=100000):
 
 
 # test()
-file = open('AGENTS/minimax_against_random/'+'agent_obj.ag','rb')
-agent0 = pickle.load(file)
+file = open('AGENTS/q_against_random/'+'agent_obj.ag','rb')
+agent1 = pickle.load(file)
 file.close()
-agent0.training = False
-agent0.id = 1
-agent1 = Random_Agent(env)
+agent1.training = False
+agent1.id = 1
+agent0 = Q_Agent(env)
 # agent0 = MiniMax_Q_Agent(0, env)
-test(agent0,agent1,100000)
+train(agent0,agent1,100000)
