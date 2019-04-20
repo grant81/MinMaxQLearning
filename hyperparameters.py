@@ -3,4 +3,4 @@ LEARNING_RATE = 0.05
 EXPLORE_EPSILON = 0.1
 DECAY = 0.9999954
 # MODEL_PATH = 'AGENTS/mm_a_mm/'
-MODEL_PATH = 'AGENTS/minmax_aganist_random/'
+MODEL_PATH = 'AGENTS/qr_challenger/'

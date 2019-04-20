@@ -57,7 +57,7 @@ class Q_Agent:
 
     def load_agent(self,path = MODEL_PATH):
         # PI = pd.read_csv(path + 'PI.txt', sep=' ', header=None)
-        Q = pd.read_csv(path + 'Q.txt', sep=' ', header=False, index=False)
+        Q = pd.read_csv(path + 'Q.txt', sep=' ', header=None)
         V = pd.read_csv(path + 'V.txt', sep=' ', header=None)
         # self.PI = PI.values
         self.Q = Q.values

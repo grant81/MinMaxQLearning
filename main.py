@@ -14,16 +14,19 @@ def train(agent0, agent1, eps=10000):
     for episode in range(eps):
         env.reset()
         reward = -1
-        state = env.boardToState()
+        state0 = env.boardToState()
+        state1 = env.boardToState(True)
         step = 0
         while reward < 0 and step < 800:
             step += 1
-            a0 = agent0.take_action(state)
-            a1 = agent1.take_action(state)
-            next_state, reward = env.step(a0, a1)
-            agent0.update_Qval(a0, a1, state, next_state, int(reward == 0))
-            agent0.update_PI(state)
-            state = next_state
+            a0 = agent0.take_action(state0)
+            a1 = agent1.take_action(state1)
+            next_state0, reward = env.step(a0, a1)
+            next_state1 = env.boardToState(True)
+            agent0.update_Qval(a0, a1, state0, next_state0, int(reward == 0))
+            agent0.update_PI(state0)
+            state0 = next_state0
+            state1 = next_state1
         result[episode] = int(reward == 0)
         steps[episode] = step
         if episode % 100 == 0 and episode > 0:
@@ -82,14 +85,17 @@ def test(agent0, agent1, num=100000):
     for episode in range(num):
         env.reset()
         reward = -1
-        state = env.boardToState()
+        state0 = env.boardToState()
+        state1 = env.boardToState(True)
         step = 0
         while reward < 0 and step < 800:
             step += 1
-            a0 = agent0.take_action(state)
-            a1 = agent1.take_action(state)
-            next_state, reward = env.step(a0, a1)
-            state = next_state
+            a0 = agent0.take_action(state0)
+            a1 = agent1.take_action(state1)
+            next_state0, reward = env.step(a0, a1)
+            next_state1 = env.boardToState(True)
+            state0 = next_state0
+            state1 = next_state1
         result[episode] = int(reward == 0)
         steps[episode] = step
         if episode % 100 == 0 and episode > 0:
@@ -102,8 +108,11 @@ def test(agent0, agent1, num=100000):
 # agent0 = pickle.load(file)
 # file.close()
 # agent0.training = False
-agent0 = MiniMax_Q_Agent(0, env)
-agent1 =  Random_Agent(env)
+agent0 = Q_Agent(1, env)
+
+agent1 =  MiniMax_Q_Agent(1,env)
+agent1.load_agent('serverAgents/AGENTS/minmax_aganist_random/')
+agent1.training = False
 # train_double(agent0,agent1,20000)
 train(agent0,agent1,10000)
 # test(agent0,agent1,100000)
