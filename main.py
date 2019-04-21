@@ -6,7 +6,7 @@ from q_agent import *
 import matplotlib.pyplot as plt
 env = SoccerEnv()
 # for server runing pyplot
-# plt.switch_backend('agg')
+plt.switch_backend('agg')
 
 def train(agent0, agent1, eps=10000):
     result = np.zeros(eps)
@@ -47,7 +47,7 @@ def train(agent0, agent1, eps=10000):
     plt.xlabel('hundreds episodes')
     plt.ylabel('win percentage')
     plt.savefig(MODEL_PATH+'training_plt.png')
-    plt.show()
+   # plt.show()
 
 
 def train_double(agent0, agent1, eps=10000):
@@ -126,13 +126,13 @@ def test(agent0, agent1, num=100000):
 # agent0 = pickle.load(file)
 # file.close()
 # agent0.training = False
-agent0 = Q_Agent(0, env)
-# agent0.load_agent('AGENTS/q_against_random/')
-# agent0.training = False
+agent0 = Q_Agent(0,env)
+#agent0.load_agent('AGENTS/minimax_against_random/')
+#agent0.training = False
 agent1 = Q_Agent(1,env)
 agent1.load_agent('AGENTS/q_against_random/')
 agent1.training = False
-# agent1 = Random_Agent(env)
+#agent1 = Random_Agent(env)
 # train_double(agent0,agent1,20000)
 train(agent0,agent1,200000)
 # test(agent1,agent0,100000)
