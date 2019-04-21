@@ -123,4 +123,5 @@ class SoccerEnv:
 
 
 # s = SoccerEnv()
+# s.reset()
 # s.render()
